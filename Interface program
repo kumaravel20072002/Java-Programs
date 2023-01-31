@@ -1,0 +1,50 @@
+interface Smartphone{
+     void camera();
+     void touchpad();
+     void chargertype();
+}
+interface Amount{
+    int price();
+    int discount();
+}
+class Phone implements Smartphone,Amount
+{
+    int a=10000,b=50;
+    public void camera(){
+        System.out.println("dual camera");
+    }
+    public void touchpad(){
+        System.out.println("2x pixel Screen");
+    }
+    public void chargertype(){
+        System.out.println("C type");
+    }
+    public int price(){
+       System.out.println(a);
+       return a;
+    }
+    public int discount(){
+        System.out.println(50+"%");
+        return b;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Phone ph=new Phone();
+	    ph.camera();
+	    ph.touchpad();
+	    ph.chargertype();
+	    ph.price();
+	    ph.discount();
+	}
+}
+
+
+output : 
+dual camera
+2x pixel Screen
+C type
+10000
+50%
